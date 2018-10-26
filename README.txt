@@ -43,4 +43,4 @@ java eInkDisplayDriver-0.0.1-jar-with-dependencies.jar
 -display75
 
 for further information:
-www.ankresreich.de
+www.ankesreich.de
