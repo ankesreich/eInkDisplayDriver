@@ -4,7 +4,7 @@
 
 One raspberry pi controls two e-ink displays at the same time:
 (It is also possible just to control one display)
-With this program it is possible to show the bitmaps specified in the property file.
+With this program it is possible to show the bitmaps specified in the property file on the display(s).
 The bitmaps have to have indexed colors 1-bit black and white. 
 
 ## Hardware
@@ -16,7 +16,7 @@ Waveshare e ink Display 7.5 https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_(
 on raspberry pi: java version "1.8.0_181"
 for development: Software Development JavaSE-1.8
 
-### cabling 
+### pinout 
 see display.fzz
 
 ### Configuration of pins and bitmaps to show
