@@ -1,6 +1,6 @@
-#############################################
-### E-ink display driver for raspberry pi ###
-#############################################
+##################################################
+### JAVA E-ink display driver for raspberry pi ###
+##################################################
 
 One raspberry pi controls two e-ink displays at the same time:
 (It is also possible just to control one display)

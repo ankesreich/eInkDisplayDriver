@@ -33,6 +33,7 @@ public class MainDisplay {
 	private static final String BUSYPIN_42 = "busyPin.42";
 	private static final String CSPIN_42 = "csPin.42";
 	private static final String SPIDEVICE_42= "spiDevice.42";
+	private static final String PUT_TO_SLEEP_42= "putToSleep.42";
 	
 	//display 7.5
 	private static final String FILE_BLACK_75 = "file.black.75";
@@ -43,6 +44,7 @@ public class MainDisplay {
 	private static final String BUSYPIN_75 = "busyPin.75";
 	private static final String CSPIN_75 = "csPin.75";
 	private static final String SPIDEVICE_75= "spiDevice.75";
+	private static final String PUT_TO_SLEEP_75= "putToSleep.75";
 	
 	private static final Map<Integer, Pin> mapIntBcmPin = new HashMap<>();
 	
@@ -178,7 +180,7 @@ public class MainDisplay {
 		return value;
 	}
 	
-	private static boolean isInverted(String property, Properties props) {
+	private static boolean isTrue(String property, Properties props) {
 		String value = getPropValue(property, props);
 		try {
 			return Boolean.parseBoolean(value);
@@ -186,6 +188,7 @@ public class MainDisplay {
 			throw new RuntimeException("Property " + property + " not valid boolean.");
 		}
 	}
+	
 
 	private static void display42(Properties props) {
 		
@@ -199,8 +202,11 @@ public class MainDisplay {
 		try {
 			epd4in2.init(config);
 			Thread.sleep(5000);
-			epd4in2.displayImageFromFile(getFilePath(FILE_NAME_42, props), isInverted(FILE_INVERTED_42, props));
-			epd4in2.sleep();
+			epd4in2.displayImageFromFile(getFilePath(FILE_NAME_42, props), isTrue(FILE_INVERTED_42, props));
+			if(isTrue(PUT_TO_SLEEP_42, props))
+			{
+				epd4in2.sleep();
+			}
 
 		} catch (Exception e) {
 			log.log(Level.SEVERE, "display42 Exception " + e.getMessage(), e);
@@ -220,8 +226,11 @@ public class MainDisplay {
 			Thread.sleep(8000);
 			epd.displayImage(getFilePath(FILE_BLACK_75, props),
 					getFilePath(FILE_COLOR_75, props), 
-					isInverted(FILE_INVERTED_75, props));
-			epd.sleep();
+					isTrue(FILE_INVERTED_75, props));
+			if(isTrue(PUT_TO_SLEEP_75, props))
+			{
+				epd.sleep();
+			}
 		} catch (Exception e) {
 			log.log(Level.SEVERE, "display75 Exception " + e.getMessage(), e);
 		}
