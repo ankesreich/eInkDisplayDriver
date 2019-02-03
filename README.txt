@@ -36,7 +36,7 @@ example:
 /home/pi/displayDriver/red.bmp
 
 ### usage
-java eInkDisplayDriver-0.0.1-jar-with-dependencies.jar 
+java -jar eInkDisplayDriver-0.0.1-jar-with-dependencies.jar 
 
 ### options
 -display42 
