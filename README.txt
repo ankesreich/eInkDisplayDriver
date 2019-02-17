@@ -42,5 +42,21 @@ java -jar eInkDisplayDriver-0.0.1-jar-with-dependencies.jar
 -display42 
 -display75
 
+### include in pom.xml
+## add dependency in <dependencies>
+	<dependency>
+		<groupId>ankesreich</groupId>
+		<artifactId>eInkDisplayDriver</artifactId>
+		<version>0.0.1</version>
+	</dependency>
+
+## add repository in <repositories> 
+	<repository>
+		<id>ankesreich-mvn-repo</id>
+		<name>github</name>
+		<url>https://raw.github.com/ankesreich/eInkDisplayDriver/mvn-repo/</url>
+	</repository>
+
+
 for further information:
 www.ankesreich.de
