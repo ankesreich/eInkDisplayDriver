@@ -54,7 +54,7 @@ java -jar eInkDisplayDriver-0.0.1-jar-with-dependencies.jar
 	<repository>
 		<id>ankesreich-mvn-repo</id>
 		<name>github</name>
-		<url>https://raw.github.com/ankesreich/eInkDisplayDriver/mvn-repo/</url>
+		<url>https://raw.githubusercontent.com/ankesreich/eInkDisplayDriver/mvn-repo</url>
 	</repository>
 
 
